@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/ui/CustomCursor";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
-
 export const metadata: Metadata = {
-  title: "Vikas Sharma | Elite Developer",
-  description: "Portfolio of Vikas Sharma - Full Stack Developer and Creative Technologist.",
+  title: "Vikas Sharma — Full-Stack Developer & Creative Technologist",
+  description: "Portfolio of Vikas Sharma — Full-Stack Developer, Open-Source Contributor, and VP of DevForge. Building intelligent systems, creative tools, and impactful software.",
+  keywords: ["Vikas Sharma", "Developer Portfolio", "Full Stack", "Open Source", "NST", "DevForge", "RAASTA", "7th Hour"],
+  authors: [{ name: "Vikas Sharma", url: "https://github.com/sharmavikas18" }],
+  openGraph: {
+    title: "Vikas Sharma — Developer Portfolio",
+    description: "Full-Stack Developer, Open-Source Contributor, and VP of DevForge.",
+    type: "website",
+    url: "https://vikas-sharma-portfolio.vercel.app/",
+  },
 };
 
 export default function RootLayout({
@@ -17,11 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} ${jetbrains.variable} font-sans bg-black text-white selection:bg-primary/30 min-h-screen`}>
-        <CustomCursor />
-        {children}
-      </body>
-    </html>
-  );
+        <html lang="en" className="dark scroll-smooth">
+          <body className="font-sans bg-[#050507] text-[#e2e8f0] selection:bg-[#5eead4]/20 selection:text-[#5eead4] min-h-screen overflow-x-hidden antialiased">
+            <CustomCursor />
+            {children}
+          </body>
+        </html>
+        );
 }
