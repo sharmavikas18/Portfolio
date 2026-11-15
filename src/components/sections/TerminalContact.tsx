@@ -98,7 +98,7 @@ export default function TerminalContact({ isModal, onClose }: TerminalProps) {
           { sender: "system", text: "7th Hour // CodeDay Bangalore 1st Place Champion 🏆" },
           { sender: "system", text: "Duration: 12-Hour Continuous Hackathon Sprint (Team of 4)" },
           { sender: "system", text: "Stack: React, Node.js, WebSockets, Tailwind CSS" },
-              { sender: "system", text: "Live: https://7th-hour.vercel.app/", link: "https://7th-hour.vercel.app/" },
+          { sender: "system", text: "Live: https://7th-hour.vercel.app/", link: "https://7th-hour.vercel.app/" },
           { sender: "system", text: "Repo: https://github.com/sharmavikas18/7th-hour", link: "https://github.com/sharmavikas18/7th-hour" }
         );
         break;
