@@ -43,6 +43,7 @@ interface HeroSceneProps {
                 {"// Developer • Builder • Open Source Enthusiast"}
               </span>
               <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-[0.95] text-white">
+                <span className="sr-only">Vikas Sharma — Software Developer — </span>
                 Hey, I&apos;m <span className="text-accent-gradient">Vikas</span>.
               </h1>
             </div>

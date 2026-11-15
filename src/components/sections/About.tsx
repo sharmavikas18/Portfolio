@@ -13,7 +13,7 @@ export default function About() {
                 <div className="flex items-center gap-2 mb-3">
                   <span className="w-8 h-[2px] bg-[#5eead4]" />
                   <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#5eead4]">
-                    {"05 // The Human Dimension"}
+                    {"05 // About Vikas Sharma"}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">
@@ -33,7 +33,7 @@ export default function About() {
                     <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-white/[0.02]">
                       <Image
                         src="/profile.png"
-                        alt="Vikas Sharma"
+                        alt="Vikas Sharma — Software Developer"
                         fill
                         priority
                         className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
@@ -54,8 +54,8 @@ export default function About() {
                     </div>
 
                   <div className="mt-3.5 px-1 flex items-center justify-between text-xs font-mono text-gray-400">
-                    <span>Vikas Sharma</span>
-                    <span className="text-[#5eead4]">Full-Stack Builder</span>
+                    <span className="font-semibold text-white">Vikas Sharma</span>
+                    <span className="text-[#5eead4]">Software Developer</span>
                   </div>
                 </div>
 
