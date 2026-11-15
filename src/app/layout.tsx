@@ -3,6 +3,7 @@ import "./globals.css";
 import CustomCursor from "@/components/ui/CustomCursor";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vikas-sharma-portfolio.vercel.app"),
   title: "Vikas Sharma — Full-Stack Developer & Creative Technologist",
   description: "Portfolio of Vikas Sharma — Full-Stack Developer, Open-Source Contributor, and VP of DevForge. Building intelligent systems, creative tools, and impactful software.",
   keywords: ["Vikas Sharma", "Developer Portfolio", "Full Stack", "Open Source", "NST", "DevForge", "RAASTA", "7th Hour"],
