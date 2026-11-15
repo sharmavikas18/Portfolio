@@ -22,11 +22,14 @@ export default function TerminalContact({ isModal, onClose }: TerminalProps) {
   const [input, setInput] = useState("");
   const [matrixMode, setMatrixMode] = useState(false);
   const [accentColor, setAccentColor] = useState<"teal" | "amber" | "cyan" | "purple">("teal");
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const terminalBodyRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    // Only scroll internal terminal box when user runs commands, NEVER scroll the browser window
+    if (history.length > 3 && terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
+    }
   }, [history]);
 
   const handleCommand = (rawCommand: string) => {
@@ -285,6 +288,7 @@ export default function TerminalContact({ isModal, onClose }: TerminalProps) {
 
       {/* Terminal Output Area */}
       <div
+        ref={terminalBodyRef}
         className={`p-4 sm:p-6 h-[320px] sm:h-[360px] overflow-y-auto font-mono text-xs sm:text-sm custom-scrollbar cursor-text ${matrixMode ? "text-green-400 bg-black/95" : "text-gray-300 bg-[#07090e]/95"
           }`}
         onClick={() => inputRef.current?.focus()}
@@ -330,12 +334,11 @@ export default function TerminalContact({ isModal, onClose }: TerminalProps) {
             onKeyDown={handleKeyDown}
             placeholder="Type command (e.g. help, projects, oss, clear)..."
             className="w-full bg-transparent border-none outline-none text-white placeholder-gray-600 font-mono text-xs sm:text-sm caret-[#5eead4]"
-            autoFocus
+            autoFocus={!!isModal}
             spellCheck="false"
             autoComplete="off"
           />
         </div>
-        <div ref={terminalEndRef} />
       </div>
 
       {/* Quick Click Command Chips */}
